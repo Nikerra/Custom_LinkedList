@@ -8,7 +8,6 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 public class CustomLinkedListImpl<T> implements CustomLinkedList<T>, Iterable<T> {
-
     private Node<T> firstNode;
     private Node<T> lastNode;
     private int size = 0;

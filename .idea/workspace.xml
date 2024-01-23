@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e8fec3-ab5f-4a48-b661-5f15ce53dc45" name="Changes" comment="Реализация добавления по индексу, добавление java-doc и Junit5 тестов">
+    <list default="true" id="e9e8fec3-ab5f-4a48-b661-5f15ce53dc45" name="Changes" comment="Рефакторинг и ренейминг классов и методов">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/edu/QuickSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/LinkedListCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/CustomLinkedListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/CustomLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/CustomLinkedListImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/edu/LinkedListCustomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/edu/CustomLinkedListImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/edu/CustomLinkedListImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/edu/CustomLinkedListImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/edu/LinkedListCustomTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -57,7 +59,7 @@
       <recent name="ru.edu" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomLinkedListImplTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.edu.Main" />
       <module name="Custom_LinkedList" />
@@ -136,10 +138,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CustomLinkedListImplTest" />
         <item itemvalue="JUnit.CustomLinkedListImplTest.testRemoveElementAndTestNoSuchElementException" />
         <item itemvalue="JUnit.CustomLinkedListImplTest.testRemoveElement" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CustomLinkedListImplTest.testRemove" />
       </list>
     </recent_temporary>
@@ -152,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705991616842</updated>
-      <workItem from="1705991618058" duration="37488000" />
+      <workItem from="1705991618058" duration="58887000" />
     </task>
     <task id="LOCAL-00001" summary="Создан интерфейс CustomLinkedList, Создан класс LinkedListCustom, прописаны методы добавления элемента, возвращение элемента по индексу, удаление первого вхождения элемента, полная очистка списка, созданы iterator и descendingIterator">
       <created>1706075946736</created>
@@ -175,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706095448967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Рефакторинг и ренейминг классов и методов">
+      <created>1706161828027</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706161828027</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +194,7 @@
     <MESSAGE value="Создан интерфейс CustomLinkedList, Создан класс LinkedListCustom, прописаны методы добавления элемента, возвращение элемента по индексу, удаление первого вхождения элемента, полная очистка списка, созданы iterator и descendingIterator" />
     <MESSAGE value="Реализация добавления по индексу" />
     <MESSAGE value="Реализация добавления по индексу, добавление java-doc и Junit5 тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализация добавления по индексу, добавление java-doc и Junit5 тестов" />
+    <MESSAGE value="Рефакторинг и ренейминг классов и методов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг и ренейминг классов и методов" />
   </component>
 </project>

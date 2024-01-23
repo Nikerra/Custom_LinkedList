@@ -35,14 +35,14 @@ class CustomLinkedListImplTest {
     }
 
     @Test
-    void testAddByIndex() {
+    void testAddByIndex3() {
         assertEquals("dfg", listCustom.get(3));
         listCustom.addByIndex(3,"new DFG");
         assertEquals("new DFG", listCustom.get(3));
     }
 
     @Test
-    void testGetElement() {
+    void testGetElementByIndex3() {
         assertEquals("dfg", listCustom.get(3));
     }
 
