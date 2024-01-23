@@ -17,6 +17,18 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
         firstNode = new Node<T> (null, null, lastNode);
     }
 
+    /**
+     *
+     * @return size of the LinkedList
+     */
+    public  int size() {
+        return size;
+    }
+
+    /**
+     *
+     * @param element adds to the LinkedList
+     */
     @Override
     public void add(T element) {
 
@@ -26,32 +38,27 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
         previousElement.setNextElement(lastNode);
         size++;
     }
+
+    /**
+     *
+     * @param index   - index for the add an element to the LinkedList
+     * @param element - adds to the LinkedList
+     */
     @Override
     public void addByIndex(int index, T element) {
 
             if (index == size) {
                 add(element);
             } else {
-                addBefore(element, index);
+                addBefore(element, node(index));
             }
         }
 
-    private void addBefore(T element, int index) {
-
-
-        Node<T> nextNode = firstNode;
-        Node<T> previousNode = null;
-
-        for (int i = 0; i < index; i++) {
-            nextNode = nextNode.nextElement;
-            previousNode = nextNode.nextElement;
-            System.out.println("AddBefore method nextNode=" + nextNode.currentElement);
-            System.out.println("AddBefore method previousNode=" + previousNode.currentElement);
-        }
-        Node<T> target = new Node<>(element,nextNode,previousNode);
-        System.out.println("target=" + target.currentElement);
-    }
-
+    /**
+     *
+     * @param index - index of the element to return from the LinkedList
+     * @return element from the LinkedList
+     */
     @Override
     public T get(int index) {
 
@@ -65,13 +72,22 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
     private Node<T> getElement(Node<T> current) {
         return current.getNextElement();
     }
+
+    /**
+     *
+     * @param element - removes the first occurrence of an element in an array
+     * @return the removed element
+     */
     @Override
     public T remove(T element) {
-
+        int i=0;
         Node<T> currentNode = firstNode;
         Node<T> previousNode = null;
         boolean flag = false;
         while ((!flag)) {
+            if (currentNode.nextElement == null) {
+                return (T) ("element \"" + element + "\" not found");
+            }
             if(currentNode.getCurrentElement() == element) {
                 if(currentNode == firstNode) {
                     firstNode = currentNode.nextElement;
@@ -86,6 +102,10 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
         }
         return previousNode.getCurrentElement();
     }
+
+    /**
+     * clears the LinkedList
+     */
     @Override
     public void clear() {
 
@@ -111,8 +131,6 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
             }
         };
     }
-
-
 
     @Override
     public Iterator<T> iterator() {
@@ -152,9 +170,33 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
             this.previousElement = previousElement;
         }
     }
+    private void addBefore(T t, Node<T> node) {
 
-    public  int size() {
-        return size;
+        Node<T> pred = node.previousElement;
+        Node<T> newNode = new Node<>(t, pred, node);
+        node.previousElement = newNode;
+        if (pred == null) {
+            firstNode = newNode;
+        } else {
+            pred.nextElement = newNode;
+        }
+        size++;
+
     }
+    private Node<T> node(int index) {
+
+        if (index < (size >> 1)) {
+            Node<T> target = firstNode;
+            for (int i = 0; i < index + 1; i++)
+                target = target.nextElement;
+            return target;
+        } else {
+            Node<T> target = lastNode;
+            for (int i = size - 1; i > index; i--)
+                target = target.previousElement;
+            return target;
+        }
+    }
+
 }
 
