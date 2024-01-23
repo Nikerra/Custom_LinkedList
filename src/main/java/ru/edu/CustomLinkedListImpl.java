@@ -3,16 +3,17 @@ package ru.edu;
 import lombok.Data;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
+public class CustomLinkedListImpl<T> implements CustomLinkedList<T>, Iterable<T> {
 
     private Node<T> firstNode;
     private Node<T> lastNode;
     private int size = 0;
 
-    public LinkedListCustom() {
+    public CustomLinkedListImpl() {
         lastNode = new Node<T> (null, firstNode, null);
         firstNode = new Node<T> (null, null, lastNode);
     }
@@ -86,7 +87,7 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
         boolean flag = false;
         while ((!flag)) {
             if (currentNode.nextElement == null) {
-                return (T) ("element \"" + element + "\" not found");
+                throw new NoSuchElementException("not found element=" + element);
             }
             if(currentNode.getCurrentElement() == element) {
                 if(currentNode == firstNode) {
@@ -110,7 +111,7 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
     public void clear() {
 
         size = 0;
-        firstNode = new Node<>(null, null, lastNode);
+        firstNode = new Node<>(null, null, null);
         lastNode = new Node<>(null,firstNode,null);
     }
 
@@ -118,11 +119,11 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
 
     @Override
     public Iterator<T> descendingIterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             int counter = size - 1;
             @Override
             public boolean hasNext() {
-                return counter >=0;
+                return counter >= 0;
             }
 
             @Override
@@ -134,7 +135,7 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             int counter = 0;
             @Override
             public boolean hasNext() {

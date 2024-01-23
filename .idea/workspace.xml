@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9e8fec3-ab5f-4a48-b661-5f15ce53dc45" name="Changes" comment="Реализация добавления по индексу">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/edu/LinkedListCustomTest.java" afterDir="false" />
+    <list default="true" id="e9e8fec3-ab5f-4a48-b661-5f15ce53dc45" name="Changes" comment="Реализация добавления по индексу, добавление java-doc и Junit5 тестов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/LinkedListCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/LinkedListCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/LinkedListCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/CustomLinkedListImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/edu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/edu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/edu/LinkedListCustomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/edu/CustomLinkedListImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <recent name="ru.edu" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListCustomTest">
+  <component name="RunManager" selected="JUnit.CustomLinkedListImplTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.edu.Main" />
       <module name="Custom_LinkedList" />
@@ -71,7 +71,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListCustomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomLinkedListImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Custom_LinkedList" />
       <extension name="coverage">
         <pattern>
@@ -80,13 +80,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.edu" />
-      <option name="MAIN_CLASS_NAME" value="ru.edu.LinkedListCustomTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.edu.CustomLinkedListImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListCustomTest.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomLinkedListImplTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Custom_LinkedList" />
       <extension name="coverage">
         <pattern>
@@ -95,40 +95,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.edu" />
-      <option name="MAIN_CLASS_NAME" value="ru.edu.LinkedListCustomTest" />
-      <option name="METHOD_NAME" value="testClear" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListCustomTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Custom_LinkedList" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.edu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.edu" />
-      <option name="MAIN_CLASS_NAME" value="ru.edu.LinkedListCustomTest" />
-      <option name="METHOD_NAME" value="testGet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListCustomTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Custom_LinkedList" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.edu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.edu" />
-      <option name="MAIN_CLASS_NAME" value="ru.edu.LinkedListCustomTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.edu.CustomLinkedListImplTest" />
       <option name="METHOD_NAME" value="testRemove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomLinkedListImplTest.testRemoveElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Custom_LinkedList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.edu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.edu" />
+      <option name="MAIN_CLASS_NAME" value="ru.edu.CustomLinkedListImplTest" />
+      <option name="METHOD_NAME" value="testRemoveElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomLinkedListImplTest.testRemoveElementAndTestNoSuchElementException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Custom_LinkedList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.edu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.edu" />
+      <option name="MAIN_CLASS_NAME" value="ru.edu.CustomLinkedListImplTest" />
+      <option name="METHOD_NAME" value="testRemoveElementAndTestNoSuchElementException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedListCustomTest" />
-        <item itemvalue="JUnit.LinkedListCustomTest.testRemove" />
+        <item itemvalue="JUnit.CustomLinkedListImplTest" />
+        <item itemvalue="JUnit.CustomLinkedListImplTest.testRemoveElementAndTestNoSuchElementException" />
+        <item itemvalue="JUnit.CustomLinkedListImplTest.testRemoveElement" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.LinkedListCustomTest.testClear" />
-        <item itemvalue="JUnit.LinkedListCustomTest.testGet" />
+        <item itemvalue="JUnit.CustomLinkedListImplTest.testRemove" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705991616842</updated>
-      <workItem from="1705991618058" duration="32552000" />
+      <workItem from="1705991618058" duration="37488000" />
     </task>
     <task id="LOCAL-00001" summary="Создан интерфейс CustomLinkedList, Создан класс LinkedListCustom, прописаны методы добавления элемента, возвращение элемента по индексу, удаление первого вхождения элемента, полная очистка списка, созданы iterator и descendingIterator">
       <created>1706075946736</created>
@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706088293192</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализация добавления по индексу, добавление java-doc и Junit5 тестов">
+      <created>1706095448967</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706095448967</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,17 +184,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создан интерфейс CustomLinkedList, Создан класс LinkedListCustom, прописаны методы добавления элемента, возвращение элемента по индексу, удаление первого вхождения элемента, полная очистка списка, созданы iterator и descendingIterator" />
     <MESSAGE value="Реализация добавления по индексу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализация добавления по индексу" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/edu/LinkedListCustom.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Реализация добавления по индексу, добавление java-doc и Junit5 тестов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализация добавления по индексу, добавление java-doc и Junit5 тестов" />
   </component>
 </project>

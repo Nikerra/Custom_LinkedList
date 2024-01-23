@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
 
-        LinkedListCustom<String> listCustom = new LinkedListCustom<>();
+        CustomLinkedListImpl<String> listCustom = new CustomLinkedListImpl<>();
         listCustom.add("abc");
         listCustom.add("bc");
         listCustom.add("c");
@@ -56,6 +56,8 @@ public class Main {
         System.out.println("element by index(0) for the clean list=" + listCustom.get(0));
 
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        System.out.println("remove element=" + listCustom.remove("bc"));
+//        System.out.println("remove element=" + listCustom.remove("bc"));
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 }
