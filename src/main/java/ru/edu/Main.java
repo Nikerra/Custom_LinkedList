@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
 
-        LinkedListCustom<String> listCustom = new LinkedListCustom<>();
+        CustomLinkedListImpl<String> listCustom = new CustomLinkedListImpl<>();
         listCustom.add("abc");
         listCustom.add("bc");
         listCustom.add("c");
