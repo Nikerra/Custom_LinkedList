@@ -6,15 +6,18 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
+// следи за нэймингом. LinkedListCustom и CustomLinkedList сильно путают
+public class CustomLinkedListImpl<T> implements CustomLinkedList<T>, Iterable<T> {
 
     private Node<T> firstNode;
     private Node<T> lastNode;
     private int size = 0;
 
-    public LinkedListCustom() {
-        lastNode = new Node<T> (null, firstNode, null);
-        firstNode = new Node<T> (null, null, lastNode);
+    public CustomLinkedListImpl() {
+        //firstNode в инициализации lastNode всегда null. Параметризация объекта тоже лишняя, джава сама выводит тип
+        //по типу ссылки
+        lastNode = new Node<>(null, null, null);
+        firstNode = new Node<>(null, null, lastNode);
     }
 
     /**
@@ -86,6 +89,7 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
         boolean flag = false;
         while ((!flag)) {
             if (currentNode.nextElement == null) {
+                //А что если параметризуем не строкой? Тут надо прокидывать исключение.
                 return (T) ("element \"" + element + "\" not found");
             }
             if(currentNode.getCurrentElement() == element) {
@@ -118,11 +122,12 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
 
     @Override
     public Iterator<T> descendingIterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             int counter = size - 1;
+
             @Override
             public boolean hasNext() {
-                return counter >=0;
+                return counter >= 0;
             }
 
             @Override
@@ -134,7 +139,7 @@ public class LinkedListCustom <T> implements CustomLinkedList<T>, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             int counter = 0;
             @Override
             public boolean hasNext() {

@@ -5,11 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LinkedListCustomTest {
-    LinkedListCustom<String> listCustom = new LinkedListCustom<>();
+class CustomLinkedListImplTest {
+    CustomLinkedListImpl<String> listCustom;
 
     @BeforeEach
     void setListCustom() {
+        // чтобы не было, что объект создается в одном месте, а инициализируется в другом.
+        listCustom = new CustomLinkedListImpl<>();
         listCustom.add("abc");
         listCustom.add("bc");
         listCustom.add("c");
@@ -20,7 +22,8 @@ class LinkedListCustomTest {
         listCustom.add("gh");
     }
     @Test
-    void testSize() {
+    //Конвенции названий методов могут быть разными, но названия методов должны быть информативными
+    void size_whenAdded8elements_thenSizeIs8() {
         assertEquals(8, listCustom.size());
     }
 
